@@ -1400,7 +1400,6 @@ textarea {
 
 .hero__content {
   min-height: 100vh;
-  min-height: 100dvh;
   padding: 136px 0 80px;
   display: flex;
   flex-direction: column;
@@ -2111,7 +2110,6 @@ textarea {
 
 .not-found__content {
   min-height: 100vh;
-  min-height: 100dvh;
   padding: 180px 0;
   display: flex;
   flex-direction: column;
