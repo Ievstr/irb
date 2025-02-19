@@ -1871,6 +1871,7 @@ textarea {
   padding: 60px 0;
   background-color: #080F20;
   color: #FFFFFF;
+  overflow: hidden;
 }
 
 .footer__info {
@@ -2678,7 +2679,8 @@ textarea {
   }
 
   .portfolio-card__img {
-    height: 220px;
+    height: auto;
+    aspect-ratio: 16/10;
   }
 
   .portfolio-card__title {
