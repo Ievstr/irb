@@ -2246,21 +2246,23 @@ textarea {
   }
 
   .portfolio__filter {
+    display: flex;
     margin-left: -30px;
     margin-right: -30px;
     margin-bottom: 30px;
-  }
-
-  .portfolio__filter-inner {
-    gap: 12px;
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
 
-  .portfolio__filter-inner::-webkit-scrollbar {
+  .portfolio__filter::-webkit-scrollbar {
     width: 0;
     height: 0;
+  }
+
+  .portfolio__filter-inner {
+    gap: 12px;
+    flex-shrink: 0;
   }
 
   .portfolio__filter-item:first-child {
