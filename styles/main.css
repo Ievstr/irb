@@ -1601,7 +1601,35 @@ textarea {
 
 .steps {
   padding: 80px 0;
-  height: 785px;
+  height: 250vh;
+}
+
+.steps__inner {
+  position: sticky;
+  top: 140px;
+  padding-bottom: 200px;
+}
+
+.steps__line {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #F3F3F3;
+  z-index: -1;
+}
+
+.steps__line:nth-child(2) {
+  top: 310px;
+}
+
+.steps__line:nth-child(3) {
+  top: 440px;
+}
+
+.steps__line:nth-child(4) {
+  top: 570px;
 }
 
 .steps__title {
@@ -1610,6 +1638,105 @@ textarea {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 60px;
+}
+
+.steps__progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  position: relative;
+}
+
+.steps__progress-item {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: #949AAF;
+}
+
+.steps__range {
+  position: absolute;
+  top: 62px;
+  left: 1%;
+  right: 8px;
+  transform: translateX(-100%);
+  height: 390px;
+  width: 3px;
+  background-color: #1F5DEF;
+  transition: all 0.3s;
+}
+
+.steps__range::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #1F5DEF;
+}
+
+.steps__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.steps__item {
+  width: 429px;
+  padding: 30px;
+  background-color: #F3F3F3;
+  position: relative;
+}
+
+.steps__item:not(:first-child) {
+  margin-left: -132px;
+}
+
+.steps__item:nth-child(2) {
+  background-color: #1F5DEF;
+  color: #FFFFFF;
+}
+
+.steps__item:nth-child(2) .steps__item-info,
+.steps__item:nth-child(2) .steps__item-description {
+  color: #FFFFFF;
+}
+
+.steps__item:nth-child(3) {
+  background-color: #080F20;
+  color: #FFFFFF;
+}
+
+.steps__item:nth-child(3) .steps__item-info,
+.steps__item:nth-child(3) .steps__item-description {
+  color: #FFFFFF;
+}
+
+.steps__item:nth-child(4) {
+  background-color: #F4F7FE;
+}
+
+.steps__item-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.steps__item-info {
+  color: #1F5DEF;
+}
+
+.steps__item-description {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #949AAF;
 }
 
 .portfolio {
@@ -2231,12 +2358,57 @@ textarea {
     padding: 50px 0;
   }
 
-  .steps {
-    height: 687px;
+  .steps__inner {
+    padding-bottom: 210px;
+  }
+
+  .steps__line {
+    top: 140px;
+  }
+
+  .steps__line:nth-child(2) {
+    top: 270px;
+  }
+
+  .steps__line:nth-child(3) {
+    top: 400px;
+  }
+
+  .steps__line:nth-child(4) {
+    top: 530px;
   }
 
   .steps__title {
     font-size: 36px;
+  }
+
+  .steps__title {
+    margin-bottom: 40px;
+  }
+
+  .steps__content {
+    position: relative;
+  }
+
+  .steps__item {
+    width: 437px;
+  }
+
+  .steps__item:not(:first-child) {
+    margin-left: 0;
+    position: absolute;
+  }
+
+  .steps__item:nth-child(2) {
+    left: calc(41% - 200px);
+  }
+
+  .steps__item:nth-child(3) {
+    right: calc(41% - 200px);
+  }
+
+  .steps__item:nth-child(4) {
+    right: 0;
   }
 
   .portfolio {
@@ -2630,12 +2802,69 @@ textarea {
     padding: 30px 0;
   }
 
-  .steps {
-    height: 578px;
+  .steps__inner {
+    padding-bottom: 190px;
+  }
+
+  .steps__line {
+    top: 115px;
+  }
+
+  .steps__line:nth-child(2) {
+    top: 245px;
+  }
+
+  .steps__line:nth-child(3) {
+    top: 375px;
+  }
+
+  .steps__line:nth-child(4) {
+    top: 505px;
   }
 
   .steps__title {
     font-size: 27px;
+  }
+
+  .steps__title {
+    margin-bottom: 30px;
+  }
+
+  .steps__progress-item {
+    font-size: 16px;
+  }
+
+  .steps__range {
+    top: 57px;
+  }
+
+  .steps__content {
+    display: block;
+  }
+
+  .steps__item {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .steps__item:nth-child(2) {
+    left: 0;
+  }
+
+  .steps__item:nth-child(3) {
+    right: 0;
+  }
+
+  .steps__item-heading {
+    font-size: 18px;
+  }
+
+  .steps__item-description {
+    font-size: 14px;
+  }
+
+  .steps__item-description {
+    font-size: 17px;
   }
 
   .portfolio {

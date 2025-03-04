@@ -188,6 +188,69 @@ $(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/steps/steps.js":
+/*!*******************************************!*\
+  !*** ./src/blocks/modules/steps/steps.js ***!
+  \*******************************************/
+/***/ (() => {
+
+$(function () {
+  gsap.registerPlugin(ScrollTrigger);
+  var targetBlock = $('.js-steps');
+  if (targetBlock.length) {
+    var positionCards = function positionCards() {
+      var top = 0;
+      var distance = 0;
+      var step = 1;
+      var scrollHeight = window.innerHeight / 2;
+      var targetBlockOffset = targetBlock.offset().top;
+      // let targetBlockHeight = targetBlock.outerHeight();
+
+      $.each(cards, function () {
+        $(this).css('top', top);
+        $(this).css({
+          'transform': 'translateY(' + distance + 'vh)'
+        });
+        gsap.to($(this), {
+          scrollTrigger: {
+            trigger: '.js-steps',
+            start: targetBlockOffset - window.innerHeight + scrollHeight * step,
+            end: targetBlockOffset - window.innerHeight + scrollHeight * step + scrollHeight,
+            scrub: true
+            // markers: true,
+          },
+          y: 0
+          // ease: 'power1.inOut',
+          // duration: 2
+        });
+
+        // top += 70;
+        $(window).width() < 768 ? top += 64 : top += 70;
+        distance = 100;
+        step += 1;
+      });
+    };
+    var cards = $('.steps__item');
+    positionCards();
+    $(window).scroll(function () {
+      var currentScroll = $(window).scrollTop();
+      var targetBlockOffset = Math.floor(targetBlock.offset().top);
+      var targetBlockHeight = Math.floor(targetBlock.outerHeight());
+      var range = $('.js-steps-range');
+      var scrollProgress = (currentScroll - targetBlockOffset) / (targetBlockHeight - window.innerHeight) * 100;
+      if (scrollProgress <= 0) {
+        range.css('left', 1 + '%');
+      } else if (scrollProgress >= 100) {
+        range.css('left', 100 + '%');
+      } else {
+        range.css('left', scrollProgress + '%');
+      }
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -202,10 +265,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_hero_hero__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_hero_hero__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_slider_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/slider/slider */ "./src/blocks/modules/slider/slider.js");
 /* harmony import */ var _modules_slider_slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_slider_slider__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/services-all/services-all */ "./src/blocks/modules/services-all/services-all.js");
-/* harmony import */ var _modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_steps_steps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/steps/steps */ "./src/blocks/modules/steps/steps.js");
+/* harmony import */ var _modules_steps_steps__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_steps_steps__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/services-all/services-all */ "./src/blocks/modules/services-all/services-all.js");
+/* harmony import */ var _modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_services_all_services_all__WEBPACK_IMPORTED_MODULE_4__);
 
-// import "%modules%/nav/nav";
+
 
 
 
