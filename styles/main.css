@@ -2802,6 +2802,10 @@ textarea {
     padding: 30px 0;
   }
 
+  .steps {
+    height: 250svh;
+  }
+
   .steps__inner {
     padding-bottom: 190px;
   }
