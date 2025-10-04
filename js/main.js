@@ -11,7 +11,8 @@ $(function () {
   var header = $('.js-header');
   var headerHeight = $('.js-header').height();
   var heroHeight = $('.js-hero').height();
-  var point = heroHeight - headerHeight;
+  var introHeight = $('.js-intro .intro__media').height();
+  var point = heroHeight ? heroHeight : introHeight - headerHeight;
   var scrollWidth = window.innerWidth - $('body')[0].offsetWidth + 'px';
   function showScroll() {
     if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -145,11 +146,17 @@ $(function () {
 $(function () {
   var ticker = new Swiper('.js-ticker', {
     slidesPerView: 'auto',
-    speed: 30000,
+    // speed: 30000,
     loop: true,
     allowTouchMove: false,
     autoplay: {
       delay: 0
+    },
+    on: {
+      init: function init() {
+        var speed = this.slides[0].childElementCount * 3500;
+        this.params.speed = speed;
+      }
     }
   });
   var reviewsSlider = new Swiper('.js-reviews-slider', {

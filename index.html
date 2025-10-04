@@ -24,7 +24,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./libs/wow/animate.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -32,9 +31,10 @@
   <div class="container">
     <div class="header__body">
       <a href="#" class="logo">
-        <svg width="100" height="38">
+        <img src="./img/content/logo.svg" width="88" height="38" alt="logo">
+        <!-- <svg width="100" height="38">
           <use xlink:href="./img/sprites/sprite.svg#logo"></use>
-        </svg>
+        </svg> -->
       </a>
 
       <div class="header__content">
@@ -102,14 +102,14 @@
   <div class="container">
     <div class="hero__content">
       <div class="hero__text">
-        <div class="hero__suptitle wow animate__animated heroSuptitleAnimate">Топ-агенство из Санкт-Петербурга</div>
-        <h1 class="hero__title wow animate__animated animate__fadeInUp" data-wow-delay=".1s">Разработка цифровых проектов</h1>
-        <div class="hero__buttons wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+        <div class="hero__suptitle">Топ-агенство из Санкт-Петербурга</div>
+        <h1 class="hero__title">Разработка цифровых проектов</h1>
+        <div class="hero__buttons">
           <a href="#" class="hero__button button button_white">Смотреть портфолио</a>
           <a href="#" class="hero__button button button_border button_border_white">Наши услуги</a>
         </div>
       </div>
-      <div class="swiper ticker js-ticker wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+      <div class="swiper ticker js-ticker">
   <div class="swiper-wrapper ticker-wrapper">
     <div class="swiper-slide ticker__item">
       <div class="ticker__elem">
@@ -195,7 +195,7 @@
   <div class="services">
   <div class="container">
     <div class="services__content">
-      <a href="#" class="services__item wow animate__animated animate__fadeInUp">
+      <a href="#" class="services__item">
         <div class="services__item-heading">
           <h3 class="services__item-title">Веб-разработка</h3>
           <div class="services__item-arrow">
@@ -209,7 +209,7 @@
         </div>
       </a>
 
-      <a href="#" class="services__item wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+      <a href="#" class="services__item">
         <div class="services__item-heading">
           <h3 class="services__item-title">Мобильная разработка</h3>
           <div class="services__item-arrow">
@@ -223,7 +223,7 @@
         </div>
       </a>
 
-      <a href="#" class="services__item wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+      <a href="#" class="services__item">
         <div class="services__item-heading">
           <h3 class="services__item-title">E-commerce</h3>
           <div class="services__item-arrow">
@@ -237,7 +237,7 @@
         </div>
       </a>
 
-      <a href="#" class="services__item wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+      <a href="#" class="services__item">
         <div class="services__item-heading">
           <h3 class="services__item-title">SEO и аналитика</h3>
           <div class="services__item-arrow">
@@ -251,7 +251,7 @@
         </div>
       </a>
 
-      <a href="#" class="services__item wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+      <a href="#" class="services__item">
         <div class="services__item-heading">
           <h3 class="services__item-title">Back-end и интеграции</h3>
           <div class="services__item-arrow">
@@ -265,7 +265,7 @@
         </div>
       </a>
 
-      <a href="#" class="services__button button button_hover_dark wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+      <a href="#" class="services__button button button_hover_dark">
         Оставить заявку
         <svg width="24" height="24">
           <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
@@ -274,11 +274,37 @@
     </div>
   </div>
 </div>
+  <section class="invitation">
+  <div class="invitation__img">
+    <picture>
+      <source srcset="./img/content/invitation.webp" type="image/webp" media="(min-width: 768px)">
+      <source srcset="./img/content/invitation.png" media="(min-width: 768px)">
+      <source srcset="./img/content/invitation-mobile.webp" type="image/webp">
+      <img src="./img/content/invitation-mobile.png" width="1920" height="544" alt="img" loading="lazy">
+    </picture>
+  </div>
+  <div class="container">
+    <div class="invitation__content">
+      <div class="invitation__text">
+        <h2 class="invitation__title">Лучшее мобильное приложение для ресторанов и кафе</h2>
+        <div class="invitation__description">
+          <p>Пренадлежащее вашему бизнесу <br> и полностью управляется вами</p>
+        </div>
+        <a href="presentation.html" class="invitation__button button button_dark">
+          Подробнее
+          <svg width="24" height="24">
+            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
   <section class="advantages">
   <div class="container">
-    <h2 class="advantages__title wow animate__animated animate__fadeInUp">Почему с нами классно работать?</h2>
+    <h2 class="advantages__title">Почему с нами классно работать?</h2>
     <div class="advantages__content">
-      <div class="advantages__item wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+      <div class="advantages__item">
         <div class="advantages__item-img">
           <svg width="32" height="32">
             <use xlink:href="./img/sprites/sprite.svg#advantage-1"></use>
@@ -290,7 +316,7 @@
         </div>
       </div>
 
-      <div class="advantages__item wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+      <div class="advantages__item">
         <div class="advantages__item-img">
           <svg width="32" height="32">
             <use xlink:href="./img/sprites/sprite.svg#advantage-2"></use>
@@ -302,7 +328,7 @@
         </div>
       </div>
 
-      <div class="advantages__item wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+      <div class="advantages__item">
         <div class="advantages__item-img">
           <svg width="32" height="32">
             <use xlink:href="./img/sprites/sprite.svg#advantage-3"></use>
@@ -323,7 +349,7 @@
     <div class="steps__line"></div>
     <div class="steps__line"></div>
     <div class="container">
-      <h2 class="steps__title wow animate__animated animate__fadeInUp">Этапы работ</h2>
+      <h2 class="steps__title">Этапы работ</h2>
       <div class="steps__progress">
         <div class="steps__progress-item">01</div>
         <div class="steps__progress-item">02</div>
@@ -396,8 +422,8 @@
 </section>
   <section class="portfolio">
   <div class="container">
-    <h2 class="portfolio__title wow animate__animated animate__fadeInUp">Портфолио</h2>
-    <div class="portfolio__filter wow animate__animated animate__fadeInUp">
+    <h2 class="portfolio__title">Портфолио</h2>
+    <div class="portfolio__filter">
       <div class="portfolio__filter-inner">
         <a href="#" class="portfolio__filter-item portfolio__filter-item_active">Все</a>
         <a href="#" class="portfolio__filter-item">Веб-сайты</a>
@@ -406,7 +432,7 @@
       </div>
     </div>
     <div class="portfolio__content">
-      <a href="#" class="portfolio-card wow animate__animated animate__fadeInUp">
+      <a href="#" class="portfolio-card">
   <div class="portfolio-card__img">
     <picture>
       <source srcset="./img/content/portfolio-1.webp" type="image/webp">
@@ -431,7 +457,7 @@
       <p>Официальный партнер компании Apple в России и Европе, имеющий статус премиум-реселлера Apple Premium Reseller</p>
     </div>
   </div>
-</a><a href="#" class="portfolio-card wow animate__animated animate__fadeInUp">
+</a><a href="#" class="portfolio-card">
   <div class="portfolio-card__img">
     <picture>
       <source srcset="./img/content/portfolio-2.webp" type="image/webp">
@@ -454,7 +480,7 @@
       <p>Автоматизация получения накладных и загрузки их в учетные системы, перевод единиц измерения поставщика, приём товара онлайн</p>
     </div>
   </div>
-</a><a href="#" class="portfolio-card wow animate__animated animate__fadeInUp">
+</a><a href="#" class="portfolio-card">
   <div class="portfolio-card__img">
     <picture>
       <source srcset="./img/content/portfolio-3.webp" type="image/webp">
@@ -477,7 +503,7 @@
       <p>Веб-сайт для Всероссийской Конференции ФКЦ РОС в Санкт-Петербурге</p>
     </div>
   </div>
-</a><a href="#" class="portfolio-card wow animate__animated animate__fadeInUp">
+</a><a href="#" class="portfolio-card">
   <div class="portfolio-card__img">
     <picture>
       <source srcset="./img/content/portfolio-4.webp" type="image/webp">
@@ -504,7 +530,7 @@
   </div>
 </a>
     </div>
-    <div class="portfolio__buttons wow animate__animated animate__fadeInUp">
+    <div class="portfolio__buttons">
       <a href="#" class="portfolio__button button button_border">Все кейсы</a>
       <a href="#" class="portfolio__button button button_dark">
         Оставить заявку
@@ -517,7 +543,7 @@
 </section>
   <section class="partners">
   <div class="container">
-    <div class="partners__heading wow animate__animated animate__fadeInUp">
+    <div class="partners__heading">
       <h2 class="partners__title">Мы рады называть эти <br> компании своими <span>партнерами</span></h2>
       <div class="partners__arrow">
         <svg width="74" height="74">
@@ -526,73 +552,73 @@
       </div>
     </div>
     <div class="partners__content">
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-1"></use>
         </svg>
       </div>
       
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-2"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-3"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-4"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-5"></use>
         </svg>
       </div>
       
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-6"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-1"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-4"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-5"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-3"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-2"></use>
         </svg>
       </div>
 
-      <div class="partners__item wow animate__animated animate__fadeInUp">
+      <div class="partners__item">
         <svg width="318" height="200">
           <use xlink:href="./img/sprites/sprite.svg#partner-6"></use>
         </svg>
@@ -602,7 +628,7 @@
 </section>
   <section class="reviews">
   <div class="container">
-    <div class="reviews__heading wow animate__animated animate__fadeInUp">
+    <div class="reviews__heading">
       <h2 class="reviews__title">Причины, по кототорым выбирают работу с нами</h2>
       <div class="slider-buttons">
         <div class="swiper-button-prev slider-button-prev reviews-button-prev">
@@ -617,7 +643,7 @@
         </div>
       </div>
     </div>
-    <div class="reviews__content wow animate__animated animate__fadeInUp">
+    <div class="reviews__content">
       <div class="swiper reviews__slider js-reviews-slider">
         <div class="swiper-wrapper reviews__slider-wrapper">
           <div class="swiper-slide reviews__slider-item">
@@ -747,7 +773,7 @@
 </section>
   <section class="feedback">
   <div class="container">
-    <div class="feedback__content wow animate__animated animate__fadeInUp">
+    <div class="feedback__content">
       <h2 class="feedback__title">Ответим на все вопросы, обсудим детали и план</h2>
       <a href="#" class="feedback__button button">
         Оставить заявку
@@ -762,7 +788,7 @@
 
     <footer class="footer">
   <div class="container">
-    <div class="footer__info wow animate__animated animate__fadeInUp">
+    <div class="footer__info">
       <div class="footer__info-item">
         <div class="footer__info-title">Эл.почта</div>
         <a href="mailto:info@irbis.ru" class="footer__info-link">info@irbis.ru</a>
@@ -776,24 +802,18 @@
         <a href="#" class="footer__info-link">@irbis_ru</a>
       </div>
     </div>
-    <div class="footer__bottom wow animate__animated animate__fadeInUp">
+    <div class="footer__bottom">
       <div class="footer__copy">© 2025 Irbis</div>
       <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
       <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
     </div>
   </div>
 </footer>
-    
-    
 
     <script src="./libs/jquery-3.5.1.min.js"></script>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
-    <script src="./libs/wow/wow.min.js"></script>
     <script src="./libs/gsap/gsap.min.js"></script>
     <script src="./libs/gsap/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      new WOW().init();
-    </script>
   </body>
 </html>
